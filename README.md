@@ -1,6 +1,10 @@
-# SR Linux EVPN Multi Homing
+# SR Linux EVPN Multi Homing - Layer 2
 
-Baseline setup to play with EVPN multi homing (client 2), some terminology:
+Baseline setup to play with EVPN multi homing (client 2)
+
+Layer 2 multi homing where one ESI is associated with a MAC-VRF (L2 VRF) and one physical interface
+
+Some terminology:
 
 ES - Ethernet Segment
 
