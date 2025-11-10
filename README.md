@@ -156,7 +156,7 @@ Type 1 Ethernet Auto-Discovery Routes
 
 # Type 4 routes 
 
-Leaf 1 and 2 announce one type 4 route (output below is from Leaf 2) to allow for the DF election and local bias filtering (block BUM traffic being sent to the originating ES).
+Leaf1 and leaf2 announce one type 4 route (output below is from leaf2) to allow for the DF election and local bias filtering (block BUM traffic being sent to the originating ES).
 
 Route announced by leaf2
 
