@@ -18,7 +18,7 @@ DF - Designated forwarder, in an all active is the device that forwards BUM traf
 
 Symmetric routing on the ip-vrf-12
 
-# Ethernet segment - Client 2 multi homed
+# Ethernet segment - Client2 multi homed
 
 DF election results as seen in leaf2 (10.0.1.1 is leaf1)
 
@@ -97,7 +97,7 @@ Mac-table of network instance vrf-2
 
 # Type 1 routes 
 
-Leaf1 and leaf2 announce two type 1 routes (output below is from leaf2 towards the RR)
+Leaf1 and leaf2 announce two type 1 routes (output below is from leaf2 towards the RR - 10.0.2.1)
 
 1 - Auto Discovery per ES: multi-homing mode, fast convergence (mass withdrawal)
 
@@ -200,7 +200,7 @@ Type 2 MAC-IP Advertisement Routes
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ```
 
-In the vrf-2 mac-table the Client2 Etehrnet bond address is reachable via desitnation vxlan1.2 + ESI 
+In the vrf-2 mac-table the Client2 Ethernet bond address is reachable via destination vxlan1.2 - ESI 
 
 Client2 Ethernet bond address AA:C1:AB:59:EE:FF
 
@@ -243,7 +243,7 @@ The above allows leaf4 to load balance unicast traffic
 
 Leaf1 and leaf2 announce one type 4 route (output below is from leaf2) to allow for the DF election and local bias filtering (block BUM traffic being sent to the originating ES).
 
-Route announced by leaf2
+Route announced by leaf2 (10.0.2.1 is one of the RR's)
 
 ```bash
 --{ running }--[  ]--
