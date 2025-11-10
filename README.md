@@ -45,6 +45,32 @@ Summary
 
 Leaf1 is elected as the DF
 
+All active setup, non DF will forward unicast traffic to the host, the other option would have been single active where the non DF doesn't forward any type of traffic.
+
+```bash
+--{ running }--[  ]--
+A:leaf1# info system network-instance protocols evpn ethernet-segments
+    system {
+        network-instance {
+            protocols {
+                evpn {
+                    ethernet-segments {
+                        bgp-instance 1 {
+                            ethernet-segment ES-Client-2 {
+                                admin-state enable
+                                esi 00:24:24:24:24:24:24:00:00:01
+                                multi-homing-mode all-active #  <----
+                                interface lag2 {
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+```
+
 # How client 2 Ethernet bond address is learnt
 
 ```bash
